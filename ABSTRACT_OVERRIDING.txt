@@ -1,0 +1,25 @@
+Using System;                   //ABSTRACT/override
+namespace Abstract
+{
+    abstract class Animal
+    {
+        public abstract void animalSound();
+    }
+        class Bear : Animal
+        {
+            public override void animalSound()
+            {
+                Console.WriteLine("iiizzzz");
+            }
+        } 
+    
+    class program
+    {
+        static void Main (string[] args)
+        {
+            Bear  mybear = new Bear();
+            mybear.animalSound();
+
+        }
+    }
+}

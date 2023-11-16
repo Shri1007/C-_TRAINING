@@ -1,0 +1,27 @@
+using System;
+namespace CsharpInterface        //INTERFACE
+{
+    interface Operator
+    {
+        void calculate();
+     }
+    class Addition : Operator
+    {
+      public void calculate()
+        {
+            int a = 10;
+            int b = 20;
+            int c = a + b;
+            Console.WriteLine("addition:"+c);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Addition myOperator = new Addition();
+            myOperator.calculate();
+        }
+    }
+}
+

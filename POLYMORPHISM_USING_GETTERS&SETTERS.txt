@@ -1,0 +1,70 @@
+using System;
+namespace polymorphism
+{
+     public class Employee
+    {
+        private string firstname = "salary";
+        private string lastname = "paid ";
+
+        public string Getfirstname()
+        {
+            return firstname;
+        }
+        public string Setfirstname(string value)
+        {
+            return firstname = value;
+        }
+        public string GetLastname()
+        {
+            return lastname;
+        }
+        public string Setlastname()
+        {
+            return lastname;
+        }
+   }
+    
+    class parttime_employee : Employee
+    {
+        public void salary()
+        {
+            Console.WriteLine("10,000");
+        }
+    }
+    class fulltime_employee : Employee
+    { 
+        public void salary()
+        {
+            Console.WriteLine("50,000");
+        }
+
+    }
+    class temporary_employee : Employee
+    {
+        public void salary()
+        {
+            Console.WriteLine("20,000");
+        }
+    }
+     class program
+    {
+        static void Main(string[] args)
+        {
+            Employee employees = new Employee();
+            parttime_employee p_employee = new parttime_employee();
+            fulltime_employee f_employee = new fulltime_employee();
+            temporary_employee t_employee = new temporary_employee();
+
+
+            Console.WriteLine(employees.Getfirstname());
+            Console.WriteLine(employees.Setlastname());
+            p_employee.salary();
+            f_employee.salary();
+            t_employee.salary();
+            
+
+        
+
+        }
+    }
+}

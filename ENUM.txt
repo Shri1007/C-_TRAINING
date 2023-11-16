@@ -1,0 +1,52 @@
+using System;
+namespace enums
+{
+    class program
+    {
+        enum FestiveMonth
+        {
+            January,
+            May,
+            September,
+            November,
+            December,
+
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the month");
+            string inputmonth = Console.ReadLine();
+            if (Enum.TryParse<FestiveMonth>(inputmonth, out FestiveMonth month))
+            {
+                switch (month)
+                {
+                    case FestiveMonth.January:
+                        Console.WriteLine("It's a new year month");
+                        break;
+                    case FestiveMonth.May:
+                        Console.WriteLine("It's a  vacation month");
+                        break;
+                    case FestiveMonth.September:
+                        Console.WriteLine("It's navratri month");
+                        break;
+                    case FestiveMonth.November:
+                        Console.WriteLine("It's diwali month");
+                        break;
+                    case FestiveMonth.December:
+                        Console.WriteLine("It's christmas month");
+                        break;
+                    default:
+                        Console.WriteLine("It's just another month");
+                        break;
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, please enter the valid month");
+            }
+        }
+
+    }
+}

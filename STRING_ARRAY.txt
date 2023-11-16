@@ -1,0 +1,20 @@
+using System;
+namespace example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] fruits = {"apple", "orange", "grapes", "pear", "kiwi"};
+            Array.Sort(fruits);
+            foreach(string i in fruits)
+            {
+                Console.WriteLine(i);
+            }
+            int n = fruits.Length;
+           
+            Console.WriteLine("First fruit:" + fruits[0]);
+            Console.WriteLine("last fruit:" + fruits[n-1]);
+        }
+    }
+}

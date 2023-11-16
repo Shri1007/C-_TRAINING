@@ -1,0 +1,26 @@
+using System;
+using System.ComponentModel;
+
+public class Generic<T>                           //genericclass
+{
+    public T Value;
+   public static int Add(int a,int b)             //genericmethod
+    {
+        return a + b;
+    }
+    public void GenericMethod<T>(T value)        
+    {
+       Console.WriteLine(value);
+    }
+
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Generic<int> myGeneric = new Generic<int>();
+        int result = Generic<int>.Add(20,30);
+        myGeneric.GenericMethod(result);
+
+    }
+}

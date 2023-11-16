@@ -1,0 +1,15 @@
+using System;
+public static class Area
+{
+    public static int l = 5;
+    public static int b = 15;
+    public static int a = l * b;
+   
+}
+class Calculate
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Area of Rectangle is:" + Area.a);
+    }
+}

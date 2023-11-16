@@ -1,0 +1,29 @@
+using System;
+namespace linq
+{
+    class Linq
+    {
+        static void Main(string[] args)
+        {
+            List<string>myList = new List<string>()
+            {
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            };
+            var v = from l in myList
+                    where l.Contains ("Wednesday")
+                    select l;
+            foreach(var i in v)
+            {
+                Console.WriteLine (i);
+
+            }
+
+        }
+    }
+}

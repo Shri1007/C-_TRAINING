@@ -1,0 +1,28 @@
+using System;
+namespace loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] pets = { 'd', 'c', 'd', 'd', 'c', 'd', 'd', 'c', 'd', 'c' };
+            int dog = 0;
+            int cat = 0;
+            foreach (char p in pets)
+            {
+                if (p == 'd')
+                    dog++;
+
+                else if (p == 'c')
+                    cat++;
+
+            }  
+                    Console.WriteLine("Number of Dogs={0}", dog);
+
+                    Console.WriteLine("Number of Cats={0}", cat);
+                
+
+            
+        }
+    }
+}

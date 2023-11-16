@@ -1,0 +1,18 @@
+using System;
+namespace nullable
+{
+    class project
+    {
+        static void Main(string[] args)
+        {
+            Nullable<int> a = null;
+            Nullable<float> b = null;
+            Nullable<double> c = null;
+            Nullable<bool> d = true;
+            Console.WriteLine("Value of a:" + a.GetValueOrDefault());
+            Console.WriteLine("Value of b:" + b.GetValueOrDefault());
+            Console.WriteLine("Value of c:" + c.GetValueOrDefault());
+            Console.WriteLine("Value of d:" + d.GetValueOrDefault());
+        }
+    }
+}

@@ -1,0 +1,29 @@
+using System;
+namespace exceptionhandling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+               string[] Fruits = { "Pear", "kiwi", "melon", "grapes", "orange" };
+                Fruits[5] = "Apple"; 
+                foreach(string i in Fruits)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Exception handled successfully");
+            }
+       
+        }
+    }
+}

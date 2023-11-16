@@ -1,0 +1,32 @@
+using System;
+namespace example
+{
+    class Animal
+    {
+        public string name;
+        public void display()
+        {
+            Console.WriteLine("I'm a pet animal");
+        }
+    
+    class Dog : Animal
+        {
+           public void getName()
+            {
+                Console.WriteLine("My name is" + name);
+            }
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Dog Alaskan = new Dog();
+                Alaskan.name = "Zimba";
+                Alaskan.display();
+
+                Alaskan.getName();
+               // Console.ReadLine();
+            }
+        }
+    }
+}

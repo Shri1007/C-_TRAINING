@@ -1,0 +1,28 @@
+using System;                       //METHODOVERLOADING
+using System.Security.Cryptography;
+
+namespace methodoverloading
+{
+    class numbers
+    {
+        void display(int a)
+        {
+            Console.WriteLine("Integer :" + a);
+        }
+        void display(double b, float c)
+        {
+            Console.WriteLine("Double:" + b);
+            Console.WriteLine("Float: " + c);
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                numbers myNumbers = new numbers();
+                myNumbers.display(10);
+                myNumbers.display(10.787d,10.10f);
+            }
+        }
+    }
+}

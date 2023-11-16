@@ -1,0 +1,22 @@
+using System;
+namespace exceptionhandling
+{
+    class Exception
+    {
+        static void Check(int percentage)
+        {
+            if(percentage < 90)
+            {
+                throw new ArithmeticException("your are not qualified for distinction");
+            }
+            else
+            {
+                Console.WriteLine("You passed with distinction"); 
+            }
+        }
+        static void Main(string[] args)
+        {
+            Check(95);	
+        }
+    }
+}

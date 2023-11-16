@@ -1,0 +1,21 @@
+using System;
+namespace example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] element = { 1, 5, 7, 8, 25, 35, 80, 500 };
+            Array.Sort(element);
+            foreach(int i in element)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine(element.Length);
+            Console.WriteLine("lowest element:"+element.Min());
+            Console.WriteLine("highest element:"+element.Max());
+            Console.WriteLine("Sum of array:"+element.Sum());
+
+        }
+    }
+}

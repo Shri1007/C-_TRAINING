@@ -1,0 +1,17 @@
+using System;
+namespace example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] alphabets = {'b','e','a','c','d','f','k','m','y','q','w','r','t','u','o','i','p','s','g','h','j','l','z','x','v','n'};
+            Array.Sort(alphabets);
+            int n=alphabets.Length;
+            Console.WriteLine(alphabets);
+            Console.WriteLine(alphabets.Length);
+            Console.WriteLine("First element is:"+ alphabets[0]);
+            Console.WriteLine("Last element is:"+ alphabets[n-1]);
+        }
+    }
+}

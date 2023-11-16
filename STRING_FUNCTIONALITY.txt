@@ -1,0 +1,30 @@
+using System;
+namespace function
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "LOTUS IS OUR NATIONAL FLOWER";
+            string b = "lotus is our national flower ";
+            string c = "LOTUS IS OUR NATIONAL FLOWER";
+            string d = "National flower of India:";
+            string e = "Lotus";
+            Console.WriteLine(a);
+            int length = b.Length;
+            Console.WriteLine(length);
+            string addedstring = string.Concat(d,e);
+            Console.WriteLine(addedstring);
+            Boolean result1 = a.Equals(b);
+            Console.WriteLine(result1);
+            Boolean result2 = a.Equals(c);
+            Console.WriteLine(result2);
+            string str = string.Concat("Hello", e);
+            Console.WriteLine(str);
+
+
+
+
+        }
+    }
+}
