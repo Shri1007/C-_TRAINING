@@ -1,0 +1,35 @@
+using System;
+[AttributeUsage(AttributeTargets.All)]
+class Egattributes : Attribute
+{
+    private int Age;
+    public void setAge(int Age)
+    {
+        this.Age = Age;
+    }
+    public int getAge()
+    {
+        return this.Age;
+    }
+    private string Name;
+    public void setName(string Name)
+    {
+        this.Name = Name;
+    }
+    public string getName()
+    {
+        return this.Name;
+    }
+}
+class Attributes
+{
+    static void Main(string[] args)
+    {
+        Egattributes obj = new Egattributes();
+        obj.setAge(21);
+        Console.WriteLine(obj.getAge());
+        obj.setName("Lalitha Shri");
+        Console.WriteLine(obj.getName());
+
+    }
+}
