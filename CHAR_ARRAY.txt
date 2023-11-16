@@ -10,6 +10,7 @@ namespace example
             int n=alphabets.Length;
             Console.WriteLine(alphabets);
             Console.WriteLine(alphabets.Length);
+
             Console.WriteLine("First element is:"+ alphabets[0]);
             Console.WriteLine("Last element is:"+ alphabets[n-1]);
         }
