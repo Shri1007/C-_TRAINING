@@ -1,0 +1,152 @@
+using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography.X509Certificates;
+namespace game
+{
+    class Game
+    {
+        static char[] arr = new char[9] { '_', '_', '_', '_', '_', '_', '_', '_', '_' };
+
+        public static void Iniboard()
+        {
+            for (int X = 0; X < 9; X++)
+            {
+                if (X % 3 == 2)
+                {
+
+                    Console.WriteLine( arr[X] );
+                }
+                else
+                {
+                    Console.Write( arr[X] );
+                }
+            }
+
+        }
+        static void Main(string[] args)
+        {
+
+            char player1 = 'X';
+            char player2 = 'O';
+            bool chance = true;
+            int i = 0;
+            int j = 0;
+            int Count = 0;
+            Console.WriteLine("Enter name player1:");
+            string Name1 = Console.ReadLine();
+            Console.WriteLine(player1);
+            Console.WriteLine("Enter name player2:");
+            string Name2 = Console.ReadLine();
+            Console.WriteLine(player2);
+            Console.WriteLine("player1 start with X");
+            Iniboard();
+            while (chance == true)
+            {
+                Count = 0;
+                for (j=0;j<9;j++)
+                {
+                    if (arr[j]!='_')
+                    {
+                        Count++;
+                    }
+                }
+                if (Count == 9)
+                {
+                
+                    Console.WriteLine("Match is draw");
+                    break;
+                }
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine("Enter the place for x");
+                    int place = Convert.ToInt32(Console.ReadLine());
+
+                    if (arr[place - 1] == '_')
+                    {
+                        arr[place - 1] = 'X';
+                        Iniboard();
+                        i++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Enter the place for O");
+                    int place = Convert.ToInt32(Console.ReadLine());
+
+                    if (arr[place - 1] == '_')
+                    {
+                        arr[place - 1] = 'O';
+                        Iniboard();
+                        i++;
+                    }
+
+
+                }
+                if (arr[0] == arr[1] && arr[1] == arr[2] && arr[2] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[3] == arr[4] && arr[4] == arr[5] && arr[5] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[6] == arr[7] && arr[7] == arr[8] && arr[8] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[0] == arr[3] && arr[3] == arr[6] && arr[6] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[1] == arr[4] && arr[4] == arr[7] && arr[7] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[2] == arr[5] && arr[5] == arr[8] && arr[8] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[0] == arr[4] && arr[4] == arr[8] && arr[8] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+                else if (arr[2] == arr[4] && arr[4] == arr[6] && arr[6] != '_')
+                {
+                    chance = false;
+                    break;
+                }
+            }
+            if (i%2==1&Count!=9)
+            {
+                Console.WriteLine(player1+": is a winner ");
+            }
+            else if(i%2==0&Count!=9)
+            {
+                Console.WriteLine(player2 + ": is a winner");
+            }
+        }
+    }
+}
+
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
